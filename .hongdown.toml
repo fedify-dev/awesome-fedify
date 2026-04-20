@@ -1,0 +1,2 @@
+no_inherit = true
+include = ["*.md", "**/*.md"]

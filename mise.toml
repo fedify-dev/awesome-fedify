@@ -1,0 +1,18 @@
+[tools."github:dahlia/hongdown"]
+version = "0.3.7"
+
+[tools."github:dahlia/hongdown".platforms]
+linux-x64 = "hongdown-*-x86_64-unknown-linux-musl.tar.bz2"
+linux-arm64 = "hongdown-*-aarch64-unknown-linux-musl.tar.bz2"
+
+[tasks.check]
+description = "Check Markdown formatting"
+run = "hongdown --check"
+
+[tasks.fmt]
+description = "Format the codebase"
+run = "mise fmt && hongdown --write"
+
+[tasks."hooks:install"]
+description = "Install Git hooks for pre-commit checks"
+run = "mise generate git-pre-commit --write --task=check"
