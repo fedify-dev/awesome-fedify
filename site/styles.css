@@ -16,6 +16,26 @@
   --shadow: 0 24px 60px rgba(33, 83, 110, 0.08);
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg: #09131d;
+    --surface: rgba(10, 23, 34, 0.86);
+    --surface-strong: #0f1d2b;
+    --surface-soft: rgba(34, 79, 111, 0.22);
+    --text: #e9f4ff;
+    --muted: #a4bfd2;
+    --border: #26465e;
+    --border-strong: #477595;
+    --primary: #d5ecff;
+    --accent: #8ec8ea;
+    --accent-soft: #1f4f73;
+    --accent-secondary: #dc8cf0;
+    --accent-tertiary: #ff8a6d;
+    --shadow: 0 24px 60px rgba(0, 0, 0, 0.34);
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -23,6 +43,14 @@
 html {
   background: linear-gradient(180deg, #f8fcff 0%, var(--bg) 100%);
   color: var(--text);
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    background:
+      radial-gradient(circle at top left, rgba(31, 79, 115, 0.28), transparent 28%),
+      linear-gradient(180deg, #07111a 0%, var(--bg) 100%);
+  }
 }
 
 body {
@@ -237,6 +265,12 @@ img {
   background: linear-gradient(180deg, var(--surface-soft) 0%, rgba(255, 255, 255, 0.96) 100%);
   border: 1px solid var(--border);
   border-radius: 18px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .entry-card {
+    background: linear-gradient(180deg, rgba(23, 47, 66, 0.92) 0%, rgba(12, 25, 38, 0.96) 100%);
+  }
 }
 
 .entry-link {
