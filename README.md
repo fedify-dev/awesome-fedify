@@ -36,8 +36,10 @@ Libraries
 ---------
 
  -  [BotKit]: A framework for creating ActivityPub bots.
+ -  [@fedify/relay]: ActivityPub relay support.
 
 [BotKit]: https://botkit.fedify.dev/
+[@fedify/relay]: https://github.com/fedify-dev/fedify/tree/main/packages/relay
 
 
 Integrations
@@ -92,12 +94,26 @@ Drivers
 [@fedify/sqlite]: https://github.com/fedify-dev/fedify/tree/main/packages/sqlite
 
 
+Tooling
+-------
+
+ -  [@fedify/cli]: A CLI toolchain for testing and debugging federation.
+
+[@fedify/cli]: https://github.com/fedify-dev/fedify/tree/main/packages/cli
+
+
 Utilities
 ---------
 
+ -  [@fedify/debugger]: An embedded ActivityPub debug dashboard.
+ -  [@fedify/lint]: Linting utilities for Fedify projects.
+ -  [@fedify/testing]: Testing utilities for Fedify applications.
  -  [markdown-it-hashtag]: A markdown-it plugin for turning hashtags into links.
  -  [markdown-it-mention]: A markdown-it plugin for turning mentions into links.
 
+[@fedify/debugger]: https://github.com/fedify-dev/fedify/tree/main/packages/debugger
+[@fedify/lint]: https://github.com/fedify-dev/fedify/tree/main/packages/lint
+[@fedify/testing]: https://github.com/fedify-dev/fedify/tree/main/packages/testing
 [markdown-it-hashtag]: https://github.com/fedify-dev/markdown-it-hashtag
 [markdown-it-mention]: https://github.com/fedify-dev/markdown-it-mention
 

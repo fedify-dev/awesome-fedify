@@ -41,6 +41,7 @@ Use the existing categories unless there is a clear reason to add a new one:
  -  Libraries
  -  Integrations
  -  Drivers
+ -  Tooling
  -  Utilities
  -  Examples
  -  Tutorials and resources
