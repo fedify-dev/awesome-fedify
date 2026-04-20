@@ -16,10 +16,13 @@ import type {
 const README_PATH = new URL("../README.md", import.meta.url);
 const STYLES_PATH = new URL("../site/styles.css", import.meta.url);
 const LOGO_PATH = new URL("../site/logo.svg", import.meta.url);
+const OG_IMAGE_PATH = new URL("../site/og-image.png", import.meta.url);
 const DIST_PATH = new URL("../dist/", import.meta.url);
 
 const REPOSITORY_URL = "https://github.com/fedify-dev/awesome-fedify";
 const CONTRIBUTING_URL = `${REPOSITORY_URL}/blob/main/CONTRIBUTING.md`;
+const SITE_URL = "https://awesome.fedify.dev/";
+const SITE_IMAGE_URL = new URL("og-image.png", SITE_URL).toString();
 
 type Entry = {
   title: string;
@@ -54,6 +57,7 @@ await Deno.writeTextFile(
 );
 await Deno.writeTextFile(new URL("styles.css", DIST_PATH), styles);
 await Deno.copyFile(LOGO_PATH, new URL("logo.svg", DIST_PATH));
+await Deno.copyFile(OG_IMAGE_PATH, new URL("og-image.png", DIST_PATH));
 
 function collectDefinitions(root: Root): Map<string, string> {
   const definitions = new Map<string, string>();
@@ -164,10 +168,30 @@ function renderHtml(
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>${escapeHtml(pageTitle)}</title>
+    <link rel="canonical" href="${SITE_URL}">
     <meta
       name="description"
       content="A curated directory of Fedify projects, packages, examples, tutorials, and talks."
     >
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Awesome Fedify">
+    <meta property="og:title" content="${escapeHtml(pageTitle)}">
+    <meta
+      property="og:description"
+      content="A curated directory of Fedify projects, packages, examples, tutorials, and talks."
+    >
+    <meta property="og:url" content="${SITE_URL}">
+    <meta property="og:image" content="${SITE_IMAGE_URL}">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="${escapeHtml(pageTitle)}">
+    <meta
+      name="twitter:description"
+      content="A curated directory of Fedify projects, packages, examples, tutorials, and talks."
+    >
+    <meta name="twitter:image" content="${SITE_IMAGE_URL}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
