@@ -98,6 +98,9 @@ Pull requests
 Small pull requests are easiest to review. If you are adding many entries,
 consider splitting them by category.
 
+Before you commit, run `mise run fmt` to apply the repository's formatting
+rules.
+
 When you open a pull request:
 
  -  Explain why each new entry belongs in the list.
