@@ -1,3 +1,7 @@
+[tools]
+deno = "2.7.12"
+"github:svenstaro/miniserve" = "0.35.0"
+
 [tools."github:dahlia/hongdown"]
 version = "0.3.7"
 
@@ -12,6 +16,15 @@ run = "hongdown --check"
 [tasks.fmt]
 description = "Format the codebase"
 run = "mise fmt && hongdown --write"
+
+[tasks.build]
+description = "Build the static website"
+run = "deno run -A ./scripts/build.ts"
+
+[tasks.start]
+description = "Start the development server"
+depends = ["build"]
+run = "miniserve --index index.html dist/"
 
 [tasks."hooks:install"]
 description = "Install Git hooks for pre-commit checks"

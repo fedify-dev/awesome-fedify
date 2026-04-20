@@ -3,6 +3,9 @@ Contributing
 
 This list aims to be trustworthy, not exhaustive.
 
+The website is generated from `README.md`, so list changes should be made in
+`README.md` rather than editing generated files.
+
 
 What belongs here
 -----------------
