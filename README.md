@@ -74,6 +74,24 @@ Integrations
 [@fedify/sveltekit]: https://github.com/fedify-dev/fedify/tree/main/packages/sveltekit
 
 
+Drivers
+-------
+
+ -  [@fedify/amqp]: AMQP and RabbitMQ driver.
+ -  [@fedify/denokv]: Deno KV driver.
+ -  [@fedify/mysql]: MySQL and MariaDB driver.
+ -  [@fedify/postgres]: PostgreSQL driver.
+ -  [@fedify/redis]: Redis driver.
+ -  [@fedify/sqlite]: SQLite driver.
+
+[@fedify/amqp]: https://github.com/fedify-dev/fedify/tree/main/packages/amqp
+[@fedify/denokv]: https://github.com/fedify-dev/fedify/tree/main/packages/denokv
+[@fedify/mysql]: https://github.com/fedify-dev/fedify/tree/main/packages/mysql
+[@fedify/postgres]: https://github.com/fedify-dev/fedify/tree/main/packages/postgres
+[@fedify/redis]: https://github.com/fedify-dev/fedify/tree/main/packages/redis
+[@fedify/sqlite]: https://github.com/fedify-dev/fedify/tree/main/packages/sqlite
+
+
 Utilities
 ---------
 
